@@ -7,20 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+    "test": "mocha -b -R mocha-multi --reporter-options nyan=-,json=.results.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/learn-co-curriculum/javascript-intro-to-looping.git"
   },
-  "keywords": [
-    "javascript",
-    "for",
-    "while",
-    "loop",
-    "learn",
-    "flatiron"
-  ],
+  "keywords": ["javascript", "for", "while", "loop", "learn", "flatiron"],
   "author": "",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
