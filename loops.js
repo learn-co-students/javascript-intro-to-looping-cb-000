@@ -13,9 +13,7 @@ function whileLoop(n) {
   while (n > 0) {
     console.log(--n)
   }
-  if (n === 0) {
-    return "done"
-  }
+  return "done"
 }
 
 function doWhileLoop(array) {
@@ -26,6 +24,6 @@ function doWhileLoop(array) {
 
   do {
     array.pop()
-    return array
   } while (array.length > 0 && maybeTrue());
+  return array
 }
