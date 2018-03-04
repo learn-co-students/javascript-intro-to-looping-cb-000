@@ -11,6 +11,8 @@ chai.use(spies)
 const expect = chai.expect
 
 function makeArray() {
+  "use strict" ;
+
   const array = []
   const t = Math.floor(Math.random() * 10)
 
@@ -27,8 +29,11 @@ describe('loops', () => {
   })
 
   describe('forLoop(array)', () => {
+    "use strict" ;
+
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
-      const [array, t] = makeArray()
+      const array = makeArray()[0]
+      const t = makeArray()[1]
       const strangeArray = forLoop(array)
 
       expect(strangeArray.length).to.equal(t + 25)
@@ -43,6 +48,7 @@ describe('loops', () => {
   })
 
   describe('whileLoop(n)', () => {
+    "use strict" ;
     it('counts down from n to 0', () => {
       const spy = chai.spy.on(console, 'log')
       const n = Math.floor(Math.random() * 100)
@@ -56,7 +62,8 @@ describe('loops', () => {
 
   describe('doWhileLoop(array)', () => {
     it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
-      const [array, t] = makeArray()
+      const array = makeArray()[0]
+      const t = makeArray()[1]
       const l = array.length
 
       const newArray = doWhileLoop(array)
